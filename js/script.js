@@ -96,17 +96,20 @@ function resetB() {
 }
 
 /* BUTTON BOX */
+// save function first version
 // function save() {
 // 	document.getElementById("records").textContent +=
 // 		"A: " + scoreA + "; " + "B: " + scoreB + " / ";
 // }
 
+// save function 2nd ver.
 // function save() {
 // 	const records = document.getElementById("records");
 // 	const newRecord = "A: " + scoreA + "; " + "B: " + scoreB + " / ";
 // 	records.innerHTML += newRecord + "<br>";
 // }
 
+//save function 3rd ver.
 // function save() {
 // 	const records = document.getElementById("records");
 // 	const newRecord = "A: " + scoreA + "; " + "B: " + scoreB + " / ";
@@ -115,12 +118,46 @@ function resetB() {
 // 	records.appendChild(newLine); // Append the new div to the records element
 // }
 
+//save function 4th ver.
+// function save() {
+// 	const records = document.getElementById("records");
+// 	const newRecord = `<span class="score-a">A: ${scoreA}</span>
+// 	<span class="score-seperator"> / </span>
+// 	<span class="score-b">B: ${scoreB}</span>`;
+// 	const newLine = document.createElement("li");
+// 	newLine.innerHTML = newRecord;
+// 	records.appendChild(newLine);
+// }
+
+//save function without using innerHTML
 function save() {
 	const records = document.getElementById("records");
-	const newRecord = "A: " + scoreA + " / " + "B: " + scoreB;
-	const newLine = document.createElement("li"); // Create a new li element
-	newLine.textContent = newRecord; // Set the text content of the new li
-	records.appendChild(newLine); // Append the new li to the records element
+
+	// Create a new list item
+	const newLine = document.createElement("li");
+
+	// Create span for Score A
+	const scoreASpan = document.createElement("span");
+	scoreASpan.className = "score-a";
+	scoreASpan.textContent = "A: " + scoreA;
+
+	// Create span for the slash
+	const slashSpan = document.createElement("span");
+	slashSpan.className = "score-seperator";
+	slashSpan.textContent = " / ";
+
+	// Create span for Score B
+	const scoreBSpan = document.createElement("span");
+	scoreBSpan.className = "score-b";
+	scoreBSpan.textContent = "B: " + scoreB;
+
+	// Append spans to the list item
+	newLine.appendChild(scoreASpan);
+	newLine.appendChild(slashSpan);
+	newLine.appendChild(scoreBSpan);
+
+	// Append the list item to the records
+	records.appendChild(newLine);
 }
 
 function resetBoard() {

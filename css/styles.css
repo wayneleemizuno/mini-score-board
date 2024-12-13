@@ -19,13 +19,14 @@
     --TEAM-RESET-BTN-BG-COLOUR: hsla(0, 0%, 96%, 0.5);
     --SCORE-COLOUR: #daf2f5;
     --SCORE-BG-COLOUR: #121214;
-    --BTN-TEXT-COLOUR: whitesmoke;
+    --ADJUST-BTN-TEXT-COLOUR: whitesmoke;
     --BTN-SHADOW-COLOUR: hsla(0, 0%, 30%, 0.5);
     --BORDER-COLOUR: rgb(67, 118, 56);
     --BTN-ADD-COLOUR: #5b8234;
     --BTN-MINUS-COLOUR: #9a1f29;
     --BTN-SHADOW: 0 0 1px 2px var(--BTN-SHADOW-COLOUR);
     --BTN-BG-COLOUR: #fff;
+    --ORDER-NUMBER-COLOUR: rgb(82, 82, 82);
 
     /* GENERAL STYLES*/
     --BORDER: 2px solid var(--BORDER-COLOUR);
@@ -76,17 +77,18 @@ header h1 {
 
 footer {
     font-weight: bold;
-    padding: 1rem;
-    position: sticky;
+    padding: 0.5rem;
+    position: fixed;
     bottom: 0;
     z-index: 5;
 }
 
-body, main {
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 3rem;
 }
 
 button {
@@ -104,7 +106,7 @@ button:active {
     text-align: center;
     border-radius: 50%;
     border: none;
-    color: var(--BTN-TEXT-COLOUR);
+    color: var(--ADJUST-BTN-TEXT-COLOUR);
 }
 
 .add-btn {
@@ -116,7 +118,7 @@ button:active {
 }
 
 .board-body {
-    margin: 1rem 0;
+    margin-top: 1vh;
 }
 
 /* TEAM BOARD */
@@ -190,7 +192,7 @@ button:active {
     font-family: "Montserrat";
     font-weight: 600;
     border: none;
-    padding: 0 0.5rem;
+    padding: 0.2rem 0.5rem;
     border-radius: 0.3rem;
 
 }
@@ -202,8 +204,32 @@ button:active {
     align-items: center;
 }
 
-
 .record-box h2 {
     text-align: center;
     margin: 1vh 0;
+}
+
+.record-box ol {
+    font-family: "Montserrat";
+}
+
+.record-box li::marker {
+    font-weight: bold;
+    color: var(--ORDER-NUMBER-COLOUR);
+}
+
+.score-a {
+    background-color: var(--TEAM-A-BG-COLOUR);
+}
+
+.score-b {
+    background-color: var(--TEAM-B-BG-COLOUR);
+}
+
+.score-seperator {
+    color: var(--ORDER-NUMBER-COLOUR);
+}
+
+li {
+    margin-bottom: 0.3rem;
 }
