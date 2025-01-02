@@ -5,75 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Wayne Lee">
-    <title>Mini Scoreboard</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description"
+        content="WinSlate is a mini scoreboard app designed for gamers and competitors to manage and track team scores and records effortlessly. Add, remove, save, delete, update, and edit team names and scores with ease.">
+    <meta name="keywords"
+        content="scoreboard, team management, score tracking, game scores, team names, team records, add, remove, save, delete, update, edit, gaming, competition">
+
+    <title>WinSlate - A mini scoreboard for every gamer and competitor</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <h1>Mini Scoreboard</h1>
+        <div class="app-title-bar">
+            <h1>WinSlate</h1>
+        </div>
+        <div class="add-team-area">
+            <div class="team-name-input-area">
+                <input type="text" id="team-name-input" placeholder="enter a unique team name" required maxlength="50">
+                <button id="save-team-name-btn">Save</button>
+            </div>
+            <div class="welcome-message">
+                <h3>Let's have a blast!</h3>
+                <p>Enter a name and click save to add a team to the board.</p>
+            </div>
+
+            <div class="team-name-confirm-area">
+                <div class="info-message-area">
+                    <p id="info-message"></p>
+                </div>
+                <div class="confirm-btns"><button id="confirm-team-name-btn">Confirm</button>
+                    <button id="cancel-team-name-btn">Cancel</button>
+                </div>
+
+            </div>
+
+        </div>
+
     </header>
+
     <main>
-        <div class="board-body">
-            <div class="team-box">
-                <div class="team-a">
-                    <h2>Team A</h2>
-                    <p id="team-a-score" class="score">0</p>
-                    <div class="adjust-point-a">
-                        <div class="add-box">
-                            <button class="minus-btn" onclick="minus1A()">-1</button>
-                            <button class="minus-btn" onclick="minus3A()">-3</button>
-                            <button class="minus-btn" onclick="minus5A()">-5</button>
-                            <button class="minus-btn" onclick="minus10A()">-10</button>
-                        </div>
-                        <div class="minus-box">
-                            <button class="add-btn" onclick="add1A()">+1</button>
-                            <button class="add-btn" onclick="add3A()">+3</button>
-                            <button class="add-btn" onclick="add5A()">+5</button>
-                            <button class="add-btn" onclick="add10A()">+10</button>
-                        </div>
-                    </div>
-                    <button class="reset-a" onclick="resetA()">Reset A</button>
-                </div>
+        <div class="main-section">
 
-                <div class="team-b">
-                    <h2>Team B</h2>
-                    <p id="team-b-score" class="score">0</p>
-                    <div class="adjust-point-b">
-                        <div class="add-box">
-                            <button class="minus-btn" onclick="minus1B()">-1</button>
-                            <button class="minus-btn" onclick="minus3B()">-3</button>
-                            <button class="minus-btn" onclick="minus5B()">-5</button>
-                            <button class="minus-btn" onclick="minus10B()">-10</button>
-                        </div>
-                        <div class="minus-box">
-                            <button class="add-btn" onclick="add1B()">+1</button>
-                            <button class="add-btn" onclick="add3B()">+3</button>
-                            <button class="add-btn" onclick="add5B()">+5</button>
-                            <button class="add-btn" onclick="add10B()">+10</button>
-                        </div>
-                    </div>
-                    <button class="reset-b" onclick="resetB()">Reset B</button>
-                </div>
+        </div>
+
+        <div class="record-section">
+            <h2>Records</h2>
+            <div class="record-btn-area">
+                <button id="save-record-btn">Save Record</button>
+                <button id="clear-record-btn">Clear Records</button>
+            </div>
+            <div class="record-list-area">
+                <ol id="record-list"></ol>
             </div>
 
-            <div class="button-box">
-                <button class="save" onclick="save()">Save Records</button>
-                <button class="reset-board" onclick="resetBoard()">Reset Board</button>
-                <button class="reset-records" onclick="resetRecords()">Reset Records</button>
-            </div>
-            <hr>
-            <div class="record-box">
-                <h2>Records</h2>
-                <ol id="records" class="records">
 
-                </ol>
-            </div>
+            </ol>
         </div>
     </main>
+
     <footer>
-        <p>&copy; Wayne Lee</p>
+        <p>&copy; Wayne Lee <span id="year"></span></p>
     </footer>
+
     <script src="js/script.js"></script>
 </body>
 

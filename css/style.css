@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Wallpoet&display=swap");
+
+/* RESET */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* COLOURS */
+	--app-bg-colour: hsl(0, 0%, 97%);
+	--app-title-bg: linear-gradient(180deg, #f5f3ef, #e0dfd1);
+	--hdft-bgcolour: hsl(0, 0%, 97%);
+	--team-board-colour-1: linear-gradient(180deg, #dce6f2, #b0c4de);
+	--team-board-colour-2: linear-gradient(180deg, #c1f7c1, #90ee90);
+	--team-board-colour-3: linear-gradient(180deg, #ffecec, #ffe4e1);
+	--team-board-colour-4: linear-gradient(180deg, #d0fdfd, #98fbef);
+	--team-board-colour-5: linear-gradient(180deg, #f3d0f3, #dda0dd);
+	--team-board-colour-6: linear-gradient(180deg, #e0f1f9, #add8e6);
+	--team-board-colour-7: linear-gradient(180deg, #ffd6e1, #ffb6c1);
+	--team-board-colour-8: linear-gradient(180deg, #e6c1c1, #c79494);
+	--team-board-colour-9: linear-gradient(180deg, #fff5e6, #ffebcd);
+	--team-board-colour-10: linear-gradient(180deg, #f5f5f5, #f0f0f0);
+	--team-name-colour: hsl(0, 0%, 15%);
+	--team-name-bg-colour: hsla(0, 0%, 100%, 0.7);
+	--score-colour: hsla(0, 0%, 100%, 0.9);
+	--score-bg-colour: hsla(240, 5%, 7%, 0.7);
+	--btn-shadow-colour: hsla(0, 0%, 30%, 0.35);
+	--btn-adjust-bg-colour: hsla(0, 0%, 100%, 0.7);
+	--btn-adjust-active-bg-colour: hsl(0, 0%, 100%);
+	--btn-adjust-point-active-border-1: #a0b4ce;
+	--btn-adjust-point-active-border-2: #70de70;
+	--btn-adjust-point-active-border-3: #ffb4b1;
+	--btn-adjust-point-active-border-4: #78db78;
+	--btn-adjust-point-active-border-5: #bb80bb;
+	--btn-adjust-point-active-border-6: #8db8e6;
+	--btn-adjust-point-active-border-7: #ff86a1;
+	--btn-adjust-point-active-border-8: #70de70;
+	--btn-adjust-point-active-border-9: #eebb9d;
+	--btn-adjust-point-active-border-10: #90a4be;
+	--btn-team-manage-bg-colour: hsla(0, 0%, 100%, 0.7);
+	--btn-font-colour: hsl(0, 0%, 15%);
+	--btn-shadow: 0 2px 2px 1px var(--btn-shadow-colour);
+	--record-section-bg-colour: hsl(0, 0%, 99%);
+
+	/* GENERAL STYLES*/
+	--font-family: "montserrat", sans-serif;
+	--border: 2px solid var(--border-colour);
+	--padding-mobile-top: 10px;
+	--padding-mobile-bottom: 10px;
+	--padding-mobile-left: 10px;
+	--padding-mobile-right: 10px;
+	--padding-mobile-LR: 0 var(--padding-mobile-left) 0
+		var(--padding-mobile-right);
+	--padding-mobile-TB: var(--padding-mobile-top) 0 var(--padding-mobile-bottom)
+		0;
+	--padding-mobile: 10px;
+	--padding-tablet-desktop-top: 20px;
+	--padding-tablet-desktop-bottom: 20px;
+	--padding-tablet-desktop-left: 20px;
+	--padding-tablet-desktop-right: 20px;
+	--padding-tablet-desktop-LR: 0 var(--padding-tablet-desktop-left) 0
+		var(--padding-tablet-desktop-right);
+	--padding-tablet-desktop-TB: var(--padding-tablet-desktop-top) 0
+		var(--padding-tablet-desktop-bottom) 0;
+	--padding-tablet-desktop: 20px;
+	--margin-mobile: 10px;
+	--margin-tablet-desktop: 20px;
+	--border-radius: 5px;
+}
+
+/* GENERAL */
+html {
+	font-family: var(--font-family);
+	background: var(--app-bg-colour);
+}
+
+body {
+	max-width: 1000px;
+	margin: auto;
+	box-shadow: 0 0 4px 2px hsla(0, 0%, 18%, 0.9);
+	min-height: 100vh;
+}
+
+span {
+	white-space: nowrap;
+}
+
+.confirm-btns {
+	display: none;
+}
+
+/* HEADER SECTION */
+header {
+	margin-bottom: var(--margin-mobile);
+}
+
+.welcome-message h3 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.welcome-message p {
+	padding: 0 10vw;
+	font-size: 1rem;
+}
+
+.app-title-bar {
+	height: 35px;
+	padding: 5px 0;
+	background-color: var(--hdft-bgcolour);
+	border-bottom: 1px solid darkslategrey;
+	position: sticky;
+	top: 0;
+	margin-bottom: 5px;
+	background: var(--app-title-bg);
+}
+
+h1 {
+	text-align: center;
+	font-size: 25px;
+	font-family: "Wallpoet";
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.add-team-area {
+	height: 110px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 5px;
+	width: 100%;
+	padding: var(--padding-mobile-LR);
+	margin-top: 8px;
+}
+
+.team-name-input-area {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 5px;
+}
+#team-name-input {
+	height: 35px;
+	width: 70%;
+	padding: 5px;
+	border-radius: var(--border-radius);
+	font-family: var(--font-family);
+}
+
+#save-team-name-btn {
+	width: 30%;
+	padding: 5px;
+	border-radius: var(--border-radius);
+	border: none;
+	box-shadow: var(--btn-shadow);
+	font-family: "Poiret One";
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+#save-team-name-btn:active {
+	box-shadow: none;
+}
+
+#info-message {
+	text-overflow: ellipsis;
+}
+
+.confirm-btns {
+	gap: 8px;
+	justify-content: space-between;
+}
+
+.confirm-btns button {
+	padding: 5px;
+	border-radius: var(--border-radius);
+	border: none;
+	box-shadow: var(--btn-shadow);
+	font-family: "Poiret One";
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.confirm-btns button:active {
+	box-shadow: none;
+}
+
+.info-message-area {
+	max-width: 65%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* FOOTER SECTION */
+footer {
+	text-align: center;
+	padding: var(--padding-mobile-TB);
+}
+
+/* MAIN SECTION */
+.main-section {
+	min-height: 50vh;
+	display: flex;
+	flex-wrap: wrap;
+	flex: auto;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
+	padding: var(--padding-mobile-LR);
+}
+
+.team-board {
+	max-width: 50%;
+	display: flex;
+	flex: auto;
+	flex-direction: column;
+	align-items: center;
+	border-radius: var(--border-radius);
+	padding: var(--padding-mobile);
+}
+.team-board:nth-child(1) {
+	background: var(--team-board-colour-1);
+}
+
+.team-board:nth-child(2) {
+	background: var(--team-board-colour-2);
+}
+
+.team-board:nth-child(3) {
+	background: var(--team-board-colour-3);
+}
+
+.team-board:nth-child(4) {
+	background: var(--team-board-colour-4);
+}
+
+.team-board:nth-child(5) {
+	background: var(--team-board-colour-5);
+}
+
+.team-board:nth-child(6) {
+	background: var(--team-board-colour-6);
+}
+
+.team-board:nth-child(7) {
+	background: var(--team-board-colour-7);
+}
+
+.team-board:nth-child(8) {
+	background: var(--team-board-colour-8);
+}
+
+.team-board:nth-child(9) {
+	background: var(--team-board-colour-9);
+}
+
+.team-board:nth-child(10) {
+	background: var(--team-board-colour-10);
+}
+
+.team-board:nth-child(1) .add-btn:active,
+.team-board:nth-child(1) .minus-btn:active {
+	border: 2px solid var(--btn-adjust-point-active-border-1);
+}
+
+.team-board:nth-child(2) .add-btn:active,
+.team-board:nth-child(2) .minus-btn:active {
+	border: 2px solid var(--btn-adjust-point-active-border-2);
+}
+
+.team-board:nth-child(3) .add-btn:active,
+.team-board:nth-child(3) .minus-btn:active {
+	border: 2px solid var(--btn-adjust-point-active-border-3);
+}
+
+.team-board:nth-child(4) .add-btn:active,
+.team-board:nth-child(4) .minus-btn:active {
+	border: 2px solid var(--btn-adjust-point-active-border-4);
+}
+
+.team-board:nth-child(5) .add-btn:active,
+.team-board:nth-child(5) .minus-btn:active {
+	border: 2px solid var(--btn-adjust-point-active-border-5);
+}
+
+.team-board:nth-child(6) .add-btn:active,
+.team-board:nth-child(6) .minus-btn:active {
+	border: 2px solid var(--btn-adjust-point-active-border-6);
+}
+
+.team-board:nth-child(7) .add-btn:active,
+.team-board:nth-child(7) .minus-btn:active {
+	border: 2px solid var(--btn-adjust-point-active-border-7);
+}
+
+.team-board:nth-child(8) .add-btn:active,
+.team-board:nth-child(8) .minus-btn:active {
+	border: 2px solid var(--btn-adjust-point-active-border-8);
+}
+
+.team-board:nth-child(9) .add-btn:active,
+.team-board:nth-child(9) .minus-btn:active {
+	border: 2px solid var(--btn-adjust-point-active-border-9);
+}
+
+.team-board:nth-child(10) .add-btn:active,
+.team-board:nth-child(10) .minus-btn:active {
+	border: 2px solid var(--btn-adjust-point-active-border-10);
+}
+
+.team-name-area {
+	width: 100%;
+	height: 2rem;
+	margin-bottom: 5px;
+	background-color: var(--team-name-bg-colour);
+	border-radius: var(--border-radius);
+	padding: 4px;
+}
+.team-name-text {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: center;
+	font-size: 1.2rem;
+	color: var(--team-name-colour);
+}
+
+.score-display {
+	width: 100%;
+	border-radius: var(--border-radius);
+	text-align: center;
+	background-color: var(--score-bg-colour);
+	color: var(--score-colour);
+	margin-bottom: 10px;
+	font-weight: bolder;
+	font-size: 40px;
+	overflow: hidden;
+}
+
+.adjust-score-area {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+.add-btns-area,
+.minus-btns-area {
+	display: flex;
+	gap: 5px;
+}
+
+.add-btn,
+.minus-btn {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: none;
+	font-weight: bold;
+	font-size: 18px;
+	background-color: var(--btn-adjust-bg-colour);
+	color: var(--btn-font-colour);
+}
+
+.team-manage-btns {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 8px;
+}
+
+.team-manage-btns button {
+	min-width: 50px;
+	max-width: 300px;
+	flex: auto;
+	padding: 5px;
+	border-radius: var(--border-radius);
+	border: none;
+	box-shadow: var(--btn-shadow);
+	font-size: 1rem;
+	font-family: "Poiret One", cursive;
+	font-weight: 600;
+	background-color: var(--btn-adjust-bg-colour);
+	color: var(--btn-font-colour);
+}
+
+.team-manage-btns button:active {
+	box-shadow: none;
+	background-color: var(--btn-team-manage-active-bg-colour);
+}
+
+/* RECORD SECTION */
+.record-section {
+	min-height: calc(50vh - 215px);
+	display: flex;
+	flex-direction: column;
+	padding: var(--padding-mobile);
+	margin-top: var(--margin-mobile);
+	background-color: var(--record-section-bg-colour);
+}
+
+li {
+	margin-left: 20px;
+	margin-bottom: 5px;
+}
+
+.record-btn-area {
+	display: flex;
+	gap: calc(20px + 5vw);
+	justify-content: center;
+	margin: var(--margin-mobile) 0;
+}
+
+.record-btn-area button {
+	padding: 5px;
+	border-radius: var(--border-radius);
+	border: none;
+	box-shadow: var(--btn-shadow);
+	font-family: "Poiret One";
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.record-btn-area button:active {
+	box-shadow: none;
+}
+
+/* Media queries */
+@media (max-width: 380px) {
+	.team-board {
+		width: 40%;
+		padding: var(--padding-mobile);
+	}
+}
+
+@media (min-width: 381px) and (max-width: 600px) {
+	.team-board {
+		width: 45%;
+		padding: var(--padding-mobile);
+	}
+}
+
+@media (min-width: 768px) {
+	.team-board {
+		width: 30%;
+		padding: var(--padding-tablet-desktop);
+	}
+
+	.main-section {
+		padding: var(--padding-tablet-desktop);
+	}
+}
