@@ -10,7 +10,7 @@
 :root {
 	/* COLOURS */
 	--app-bg-colour: hsl(0, 0%, 97%);
-	--app-title-bg: linear-gradient(180deg, #f5f3ef, #e0dfd1);
+	--app-theme: linear-gradient(180deg, #f5f3ef, #e0dfd1);
 	--hdft-bgcolour: hsl(0, 0%, 97%);
 	--team-board-colour-1: linear-gradient(180deg, #dce6f2, #b0c4de);
 	--team-board-colour-2: linear-gradient(180deg, #c1f7c1, #90ee90);
@@ -24,6 +24,7 @@
 	--team-board-colour-10: linear-gradient(180deg, #f5f5f5, #f0f0f0);
 	--team-name-colour: hsl(0, 0%, 15%);
 	--team-name-bg-colour: hsla(0, 0%, 100%, 0.7);
+	--team-board-shadow: 0 2px 2px 1px hsla(0, 0%, 18%, 0.5);
 	--score-colour: hsla(0, 0%, 100%, 0.9);
 	--score-bg-colour: hsla(240, 5%, 7%, 0.7);
 	--btn-shadow-colour: hsla(0, 0%, 30%, 0.35);
@@ -114,7 +115,7 @@ header {
 	position: sticky;
 	top: 0;
 	margin-bottom: 5px;
-	background: var(--app-title-bg);
+	background: var(--app-theme);
 }
 
 h1 {
@@ -158,39 +159,11 @@ h1 {
 	font-family: "Poiret One";
 	font-size: 1rem;
 	font-weight: 600;
+	background: var(--app-theme);
 }
 
 #save-team-name-btn:active {
 	box-shadow: none;
-}
-
-#info-message {
-	text-overflow: ellipsis;
-}
-
-.confirm-btns {
-	gap: 8px;
-	justify-content: space-between;
-}
-
-.confirm-btns button {
-	padding: 5px;
-	border-radius: var(--border-radius);
-	border: none;
-	box-shadow: var(--btn-shadow);
-	font-family: "Poiret One";
-	font-size: 1rem;
-	font-weight: 600;
-}
-
-.confirm-btns button:active {
-	box-shadow: none;
-}
-
-.info-message-area {
-	max-width: 65%;
-	overflow: hidden;
-	text-overflow: ellipsis;
 }
 
 /* FOOTER SECTION */
@@ -219,95 +192,7 @@ footer {
 	align-items: center;
 	border-radius: var(--border-radius);
 	padding: var(--padding-mobile);
-}
-.team-board:nth-child(1) {
-	background: var(--team-board-colour-1);
-}
-
-.team-board:nth-child(2) {
-	background: var(--team-board-colour-2);
-}
-
-.team-board:nth-child(3) {
-	background: var(--team-board-colour-3);
-}
-
-.team-board:nth-child(4) {
-	background: var(--team-board-colour-4);
-}
-
-.team-board:nth-child(5) {
-	background: var(--team-board-colour-5);
-}
-
-.team-board:nth-child(6) {
-	background: var(--team-board-colour-6);
-}
-
-.team-board:nth-child(7) {
-	background: var(--team-board-colour-7);
-}
-
-.team-board:nth-child(8) {
-	background: var(--team-board-colour-8);
-}
-
-.team-board:nth-child(9) {
-	background: var(--team-board-colour-9);
-}
-
-.team-board:nth-child(10) {
-	background: var(--team-board-colour-10);
-}
-
-.team-board:nth-child(1) .add-btn:active,
-.team-board:nth-child(1) .minus-btn:active {
-	border: 2px solid var(--btn-adjust-point-active-border-1);
-}
-
-.team-board:nth-child(2) .add-btn:active,
-.team-board:nth-child(2) .minus-btn:active {
-	border: 2px solid var(--btn-adjust-point-active-border-2);
-}
-
-.team-board:nth-child(3) .add-btn:active,
-.team-board:nth-child(3) .minus-btn:active {
-	border: 2px solid var(--btn-adjust-point-active-border-3);
-}
-
-.team-board:nth-child(4) .add-btn:active,
-.team-board:nth-child(4) .minus-btn:active {
-	border: 2px solid var(--btn-adjust-point-active-border-4);
-}
-
-.team-board:nth-child(5) .add-btn:active,
-.team-board:nth-child(5) .minus-btn:active {
-	border: 2px solid var(--btn-adjust-point-active-border-5);
-}
-
-.team-board:nth-child(6) .add-btn:active,
-.team-board:nth-child(6) .minus-btn:active {
-	border: 2px solid var(--btn-adjust-point-active-border-6);
-}
-
-.team-board:nth-child(7) .add-btn:active,
-.team-board:nth-child(7) .minus-btn:active {
-	border: 2px solid var(--btn-adjust-point-active-border-7);
-}
-
-.team-board:nth-child(8) .add-btn:active,
-.team-board:nth-child(8) .minus-btn:active {
-	border: 2px solid var(--btn-adjust-point-active-border-8);
-}
-
-.team-board:nth-child(9) .add-btn:active,
-.team-board:nth-child(9) .minus-btn:active {
-	border: 2px solid var(--btn-adjust-point-active-border-9);
-}
-
-.team-board:nth-child(10) .add-btn:active,
-.team-board:nth-child(10) .minus-btn:active {
-	border: 2px solid var(--btn-adjust-point-active-border-10);
+	box-shadow: var(--team-board-shadow);
 }
 
 .team-name-area {
@@ -427,6 +312,7 @@ li {
 	font-family: "Poiret One";
 	font-size: 1rem;
 	font-weight: 600;
+	background: var(--app-theme);
 }
 
 .record-btn-area button:active {
