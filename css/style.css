@@ -321,6 +321,15 @@ li {
 	box-shadow: none;
 }
 
+.record-item-team-name,
+.record-item-team-score {
+	font-weight: 500;
+}
+
+.record-item-team-score {
+	font-style: italic;
+}
+
 /* Media queries */
 @media (max-width: 380px) {
 	.team-board {

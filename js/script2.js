@@ -54,7 +54,6 @@ function saveTeamName(name) {
 function deleteTeam(teamId) {
 	const teamIndex = teams.findIndex((team) => team.teamId === teamId);
 	const teamName = teams[teamIndex].name;
-	confirm(`Are you sure you want to delete ${teamName}?`);
 	if (confirm(`Are you sure you want to delete ${teamName}?`)) {
 		if (teamIndex > -1) {
 			document.getElementById(`team-${teamId}`).remove();
@@ -116,8 +115,11 @@ function saveRecords() {
 	const recordList = document.getElementById("record-list");
 	const newRecordHistory = document.createElement("li");
 	newRecordHistory.innerHTML = teams
-		.map((team) => `<span>${team.name}: ${team.score}</span>`)
-		.join(" // ");
+		.map(
+			(team) =>
+				`<span class="record-item"><span class="record-item-team-name">${team.name}</span> : <span class="record-item-team-score">${team.score}</span></span>`
+		)
+		.join(" | ");
 	recordList.appendChild(newRecordHistory);
 }
 
