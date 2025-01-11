@@ -53,9 +53,14 @@ function saveTeamName(name) {
 
 function deleteTeam(teamId) {
 	const teamIndex = teams.findIndex((team) => team.teamId === teamId);
-	if (teamIndex > -1) {
-		document.getElementById(`team-${teamId}`).remove();
-		teams.splice(teamIndex, 1);
+	const teamName = teams[teamIndex].name;
+	confirm(`Are you sure you want to delete ${teamName}?`);
+	if (confirm(`Are you sure you want to delete ${teamName}?`)) {
+		if (teamIndex > -1) {
+			document.getElementById(`team-${teamId}`).remove();
+			teams.splice(teamIndex, 1);
+		}
+		return false;
 	}
 }
 

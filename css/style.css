@@ -160,6 +160,7 @@ h1 {
 	font-size: 1rem;
 	font-weight: 600;
 	background: var(--app-theme);
+	color: var(--btn-font-colour);
 }
 
 #save-team-name-btn:active {
@@ -313,6 +314,7 @@ li {
 	font-size: 1rem;
 	font-weight: 600;
 	background: var(--app-theme);
+	color: var(--btn-font-colour);
 }
 
 .record-btn-area button:active {
